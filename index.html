@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="signin">
+        <div class="content">
+            <h2>Sign In</h2>
+            <div class="form">
+                <div class="inputBox">
+                    <label for="pwd">Username:</label>
+
+                    <input type="text" id="username" required>
+                    <!-- <i>Username</i> -->
+                </div>
+                <div class="inputBox">
+                    <label for="password">Password:</label>
+                    <input type="Password" id="password" name="pwd" required>
+                    <!-- <i>password</i> -->
+                </div>
+
+                <div class="links">
+                    <a href="#" id="a">Forgot password</a>
+                    <a href="#" id="a">Signup</a>
+                </div>
+                <div class="box">
+                    <button type="submit" value="Login_Form" id="but">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        document.getElementById("but").addEventListener("click", () => {
+            if (!(username.value || password.value))
+                alert("Please enter correct values");
+            else
+                alert("Login Successfully Completed");
+        });
+    </script>
+
+</body>
+
+</html>

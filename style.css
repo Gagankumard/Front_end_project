@@ -1,0 +1,107 @@
+body {
+    background-image: url("./log-in.jpg");
+    background-position: center;
+    background-size: cover;
+    /* background-color: #A2678A; */
+}
+
+body:hover {
+    background-image: url("./images3.jpg");
+    transition: 0.4s ease-in-out;
+}
+
+.signin {
+    /* border: 5px solid rebeccapurple; */
+    border: 5px dotted #FF5B22;
+    box-shadow: firebrick;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 50vh;
+    height: 45vh;
+    padding: 15px 15px 15px 25px;
+    gap: 2px;
+    margin: 25% 15% 20% 10%;
+    transform: translateX(5px, 6px);
+    box-shadow: 5px 5px 5px #FF5B22;
+}
+
+h2:hover {
+    color: #C683D7;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: azure;
+    font-style: italic;
+    border: 50px;
+    /* background-color: aqua;
+    width: 25vh; */
+}
+
+#a {
+    color: #9EDDFF;
+    font-weight: 5px;
+    /* font-family: san; */
+    font-style: italic;
+    /* background: linear-gradient(to top left, red, blue); */
+    /* border: none; */
+    /* border-radius: 0%; */
+}
+
+#a:hover {
+    color: #AC87C5;
+    transition: 0.2s ease-in-out;
+}
+
+.inputBox {
+    margin: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    color: aquamarine;
+}
+
+#password {
+    text-shadow: 2px;
+    text-decoration-color: gray;
+    color: #6499E9;
+    padding: 5px;
+    border-radius: 5px;
+    /* background-color: ; */
+    background: linear-gradient(to from top, pink, orange);
+}
+
+.links {
+    display: flex;
+    gap: 90px;
+    margin-left: 25px;
+    margin-right: 15px;
+    color: #9EDDFF;
+    background: linear-gradient(to from top, pink, orange);
+}
+
+#but {
+    margin: 25px 0px 0px 30px;
+    color: #E36414;
+    border-radius: 25%;
+    width: 25vh;
+    height: 3vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #BFCFE7;
+    cursor: pointer;
+    /* background: linear-gradient(to from top); */
+}
+
+#but:hover {
+    color: black;
+    background-color: #ED9ED6;
+    /* background: linear-gradient(to from top,pink,orange); */
+}
