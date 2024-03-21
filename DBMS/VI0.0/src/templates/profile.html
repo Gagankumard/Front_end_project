@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="static/style_home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style_profile.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <h2>Vehicle Insurance Management</h2>
+        </div>
+                <ul class="nav-links">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('profile')}}">Profile</a></li>
+                    <li><a href="{{url_for('logout')}}">logout</a></li>
+                </ul>
+     </nav>
+    <center>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        {{ message }}<br><br>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </center>
+    <a href="{{url_for('NewVehicle')}}">Add New Vehicle Info.</a><br>
+    <a href="{{url_for('DeleteUser')}}">Delete Account</a>
+    <div class="container mt-5">
+        <div class="card mt-3" style="width: 30rem;">
+            <div class="card-body">
+                <h5 class="card-title">User Details</h5>
+                <p class="card-text">Name:  {{row_user.name}} </p>
+                <p class="card-text">Contact: {{row_user.contact}} </p>
+                <a href="{{url_for('UserUpdate')}}">Update User Info.</a>
+            </div>
+        </div>
+    </div>
+   
+        <div class="container mt-5">   
+            <div class="card mt-3" style="width: 30rem;">
+                <div class="card-body">                    
+                    {% for rv in row_vehicle %}                            
+                        <h5 class="card-title">Vechicle Details</h5>
+                        <p class="card-text">Vechicle Number: {{rv.VechNum}} </p>
+                        <p class="card-text">Manufacture Date: {{rv.make_date}} </p>
+                        <p class="card-text">Model: {{rv.model}} </p>
+                        <a href="{{url_for('VehicleUpdate')}}">Update Vehicle Info.</a><br><br><br>                                        
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    
+    
+    <div class="container mt-5">
+        <div class="card mt-3" style="width: 30rem;">
+            <div class="card-body">
+                {% for ri in row_insurance %}
+                    <h5 class="card-title">Insurance Details</h5>
+                    <p class="card-text">Duration(Months): {{ri.months}} </p>
+                    <p class="card-text">Expire Date: {{ri.expireDate}} </p>
+                    <p class="card-text">Amount per month: {{ri.amount}} </p>
+                    <p class="card-text">Insurance Provider: {{ri.provider}} </p>
+                    <a href="{{url_for('InsuranceUpdate')}}">Update Insurance Info.</a><br><br><br>
+                {% endfor %} 
+            </div>
+        </div>
+    </div>
+  
+    <script>
+        // Only push state to /login when user logs out
+        function pushLoginState() {
+            window.history.pushState(null, '', '/login');
+        }
+    
+        window.addEventListener('popstate', function(event) {
+            // You may want to handle other cases here
+            window.history.pushState(null, '', '/login');
+        });
+    </script>
+    
+    
+</body>
+</html>
+

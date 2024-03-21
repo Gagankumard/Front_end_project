@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Vehicle</title>
+    <link rel="stylesheet" href="static/style_info.css">
+</head>
+<body>
+    <div class="container">
+        <div id="userDetails" class="page">
+            <h2>User Details</h2>
+            <form id="userDetailsForm" method="POST" action="/NewVehicle">
+                <h2>Vehicle Details</h2>
+                
+                    <label for="vehicleNumber">Vehicle Number:</label><br>
+                    <input type="text" id="vehicleNumber" name="vehicleNumber" required><br>
+                    <label for="manufactureDate">Manufacture Date:</label><br>
+                    <input type="date" id="manufactureDate" name="manufactureDate" required><br>
+                    <label for="model">Model:</label><br>
+                    <input type="text" id="model" name="model" required><br>
+        
+                <h2>Insurance Info</h2>
+                
+                    <label for="duration">Duration (months):</label><br>
+                    <input type="number" id="duration" name="duration" required><br>
+                    <label for="expireDate">Expire Date:</label><br>
+                    <input type="date" id="expireDate" name="expireDate" required><br>
+                    <label for="amount">Amount:</label><br>
+                    <input type="text" id="amount" name="amount" required><br>
+                    <label for="policyProvider">Policy Provider:</label><br>
+                    <input type="text" id="policyProvider" name="policyProvider" required><br>
+                    
+                    <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
