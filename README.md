@@ -2,5 +2,5 @@
 - 2.Animated-Login_page  [Click_Me](https://gagankumard.github.io/Front_end_project/Login%20form%20123/dist/)
 - 3.Music Player  [Play](https://gagankumard.github.io/Front_end_project/Music-Player-main/)
 - 4.Login_page  [link](https://gagankumard.github.io/Front_end_project/login/)
-- 5.Sample_youtube_clone [Youtube_clone](https://gagankumard.github.io/Front_end_project/Sample_website_clone/youtube.html)
+- 5.Sample_youtube_clone [Youtube_clone](https://gagankumard.github.io/Front_end_project/Sample_website_clone/)
 
